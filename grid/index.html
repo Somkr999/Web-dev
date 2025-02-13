@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .grid-container{
+            width: 80vw;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 35px;
+            row-gap: 35px;
+        }
+        .label{
+            grid-column: 1/4;
+            grid-row: 1/2;
+            display: flex;
+            align-items:baseline;
+        }
+        .label span{
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 29px;
+            margin-left: 20px;
+        }
+        .label img{
+            width: 80px;
+        }
+        .grid-item{
+            background-color:#f0f0f0;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 25px;
+            row-gap: 35px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .grid-item h1{
+            grid-column: 1/3;
+        }
+        .grid-item button{
+            background-color:bisque;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="labl">
+
+    </div>
+    <div class="grid-container">
+        <div class="label">
+            <img src="oggy.gif" alt="Oggy Logo">
+            <span>Download our new system</span>
+        </div>
+        <div class="grid-item">
+            <h1>English</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+        <div class="grid-item">
+            <h1>Dutch</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+        <div class="grid-item">
+            <h1>Spanish</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+        <div class="grid-item">
+            <h1>Japanese</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+        <div class="grid-item">
+            <h1>Italian</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+        <div class="grid-item">
+            <h1>French</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+        <div class="grid-item">
+            <h1>Portugese</h1>
+            <button>32-bit</button>
+            <button>64-bit</button>
+        </div>
+    </div>
+</body>
+</html>
