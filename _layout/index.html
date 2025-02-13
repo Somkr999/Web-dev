@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #455d7a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            font-family: "Baloo Bhai 2";
+            background-color: #233142;
+            padding: 5px;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: inherit;
+        }
+
+        .logo img {
+            width: 70px;
+            border-radius: 45px;
+            margin-left: 10px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 40px;
+            margin-left: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar li {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: white;
+            font-size: 21px;
+        }
+
+        .navbar li:hover {
+            cursor: pointer;
+            color: #ff9a3c;
+            text-decoration: underline;
+        }
+
+        .card-container {
+            background-image: url(train_background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            width: 300px;
+            height: 450px;
+            background-color: #e3e3e3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            font-family: "Poppins";
+            border-radius: 25px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 150px;
+        }
+
+        .card h1 {
+            font-size: 25px;
+        }
+
+        .card p {
+            padding: 10px;
+        }
+
+        .card button {
+            padding: 10px;
+            color: white;
+            border: 2px solid;
+            font-size: 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease 0.2;
+            transition: font-size 0.3s ease 0.2;
+        }
+
+        .card:hover {
+            background-color: #233142;
+            color: white;
+        }
+
+        .card button:hover {
+            cursor: pointer;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        #b1 {
+            background-color: #ff6f3c;
+            border: none;
+        }
+
+        #b1:hover {
+            cursor: pointer;
+            color: #ff6f3c;
+            background-color: #e3e3e3;
+            border: 2px solid #ff6f3c;
+        }
+
+        #b2 {
+            background-color: #00bbf0;
+            border: none;
+        }
+
+        #b2:hover {
+            cursor: pointer;
+            color: #00bbf0;
+            border: 2px solid #00bbf0;
+            background-color: #e3e3e3;
+        }
+
+        #b3 {
+            background-color: #ff9a3c;
+            border: none;
+        }
+
+        #b3:hover {
+            cursor: pointer;
+            color: #ff9a3c;
+            border: 2px solid #ff9a3c;
+            background-color: #e3e3e3;
+        }
+
+        .msg-container{
+            width: 80vw;
+            height: 300px;
+            background-color: aliceblue;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 25px;
+            font-family: "Poppins";
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .msg-container h1{
+            font-size: 40px;
+        }
+        .msg-container p{
+            font-size: 19px;
+            padding: 20px;
+        }
+        #rick{
+            width: 75px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="">SigmaExpress</a>
+            <img src="train.png" alt="">
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contacts</li>
+        </ul>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="html-logo.png" alt="">
+            <h1>Learn HTML</h1>
+            <p> A brief introduction to HTML for beginners, including basic elements like headings, paragraphs, links,
+                and lists.</p>
+            <button id="b1">Start Learning HTML</button>
+        </div>
+        <div class="card">
+            <img src="css-logo.png" alt="">
+            <h1>Master CSS</h1>
+            <p>Introduction to styling with CSS, covering selectors, properties, and layout techniques like Flexbox and
+                Grid.</p>
+            <button id="b2">Begin Styling with CSS</button>
+        </div>
+        <div class="card">
+            <img src="js-logo.png" alt="">
+            <h1>JavaScript for Beginners</h1>
+            <p>Start learning JavaScript basics, from variables and loops to functions and DOM manipulation.</p>
+            <button id="b3">Dive into JavaScript</button>
+        </div>
+    </div>
+    <div class="msg-container">
+        <h1>Welcome to SigmaExpress</h1>
+        <p>
+            Welcome to CodeCraft Tutorials!
+            Discover the building blocks of web development with our easy-to-follow tutorials on HTML, CSS, and JavaScript. Whether you're a complete beginner or looking to enhance your skills, our step-by-step guides will help you create beautiful, responsive, and dynamic websites. Start your coding journey today and unlock the tools to bring your ideas to life!</p>
+    </div>
+    <img id="rick" src="rick.png" alt="">
+</body>
+
+</html>
