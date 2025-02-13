@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Container styles */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            /* Prevent the ball from going outside the view */
+            position: relative;
+        }
+
+        /* Ball styles */
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: #ff6f3c;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            /* Start at the bottom */
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        /* Keyframes for bouncing animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* Ball is at the bottom */
+            }
+
+            50% {
+                transform: translateY(-300px);
+                /* Ball goes up */
+            }
+        }
+
+        .ball {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0) scaleY(1);
+            }
+
+            50% {
+                transform: translateY(-300px) scaleY(1.2);
+            }
+
+            75% {
+                transform: translateY(-150px) scaleY(0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
